@@ -6,7 +6,10 @@ const TodoForm = ({ addTodo }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        if(!text.trim()) return;
+        if(!text) return;
+
+        addTodo(text);
+        setText("");
     }
 
     return (
